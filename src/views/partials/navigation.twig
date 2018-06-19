@@ -1,0 +1,17 @@
+<nav class="forum-nav">
+    <ul class="nav-items">
+        {% for item in navigation %}
+        <li class="nav-item">
+            {% if item.type == 'button' %}
+            <button class="nav-button">
+            {% endif %}
+
+            <a href="{{ item.url }}">{{ item.text }}</a>
+
+            {% if item.type == 'button' %}
+            </button>
+            {% endif %}
+        </li>
+        {% endfor %}
+    </ul>
+</nav>
